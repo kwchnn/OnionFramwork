@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+    nginx:
+        image: nginx:latest
+        volumes:
+            - ./:/var/www/project/
+            - ./environment/nginx/:/etc/nginx/conf.d/    
+        ports:
+            - "80:80"
+            - "443:443"
+        depends_on:
+            - php
+            
+    php:
+        image: bitnami/php-fpm:latest
+        volumes:
+            - ./:/var/www/project/
+          

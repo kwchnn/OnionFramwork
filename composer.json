@@ -1,0 +1,21 @@
+{
+    "name": "sakxa/onion-framework",
+    "description": "php mvc framework",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Onion\\": "vendor/core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kwchnn",
+            "email": "sakxar.nik@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^6.2",
+        "nikic/fast-route": "^1.3"
+    }
+}
